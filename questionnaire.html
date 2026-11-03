@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GrowthPilot Web Studio – Project Discovery Questionnaire</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap">
+<style>
+:root{--navy:#0B1F3B;--gold:#D4AF37;--bg:#F8F6EF;--card:#fff;--taupe:#B8A99A;--txt:#333;--line:#e4dfd2;--sub:#6b6358;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1626;--card:#10233f;--txt:#ece8dc;--line:#24395a;--sub:#a99f90;--navy:#050d19}}
+:root[data-theme="dark"]{--bg:#0a1626;--card:#10233f;--txt:#ece8dc;--line:#24395a;--sub:#a99f90;--navy:#050d19}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 Lato,system-ui,sans-serif}
+header{background:var(--navy);color:#F8F6EF;text-align:center;padding:36px 20px 30px;border-bottom:4px solid var(--gold)}
+header small{letter-spacing:.2em;color:var(--gold);font:600 12px Montserrat,sans-serif}
+h1{font:700 clamp(22px,5vw,32px) Montserrat,sans-serif;margin:8px 0}
+header p{margin:6px auto 0;max-width:560px;opacity:.85}
+#bar{position:sticky;top:env(safe-area-inset-top,0px);height:5px;background:var(--line);z-index:5}
+#fill{height:100%;width:0;background:var(--gold);transition:width .3s}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;margin:18px 0}
+h2{font:700 15px Montserrat,sans-serif;color:var(--navy);margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--gold);letter-spacing:.03em}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--gold)}}
+label.q,.q{display:block;font-weight:700;margin:16px 0 6px}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:10px 12px;border:1px solid var(--taupe);border-radius:8px;font:inherit;background:transparent;color:inherit}
+textarea{min-height:80px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px 14px}
+.opts label{display:flex;gap:8px;align-items:center;font-weight:400;cursor:pointer;padding:4px 0}
+.opts input{accent-color:var(--gold);width:18px;height:18px}
+.hint{color:var(--sub);font-size:14px;margin:-2px 0 6px}
+.actions{background:var(--navy);color:#F8F6EF;border-radius:12px;padding:22px;text-align:center}
+.actions h2{color:var(--gold);border:0;margin-bottom:6px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
+button{font:700 14px Montserrat,sans-serif;padding:12px 18px;border-radius:8px;border:2px solid var(--gold);background:var(--gold);color:var(--navy);cursor:pointer}
+button.o{background:transparent;color:#F8F6EF}
+#msg{min-height:22px;margin-top:12px;color:var(--gold);font-weight:700}
+footer{text-align:center;color:var(--sub);font-size:14px;margin-top:24px}
+@media print{header,#bar,.actions{display:none}section{break-inside:avoid;border:1px solid #ccc}}
+</style></head><body>
+<header><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><rect x="2" y="2" width="52" height="52" rx="12" fill="none" stroke="#D4AF37" stroke-width="3"/><path d="M14 36l14-18 14 18M20 42l8-10 8 10" fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><br><small>GROWTHPILOT WEB STUDIO</small><h1>Website Project Discovery Questionnaire</h1><p>Websites That Grow Your Business. Tell us about your business and goals so we can design a website that represents your brand professionally.</p></header>
+<div id="bar"><div id="fill"></div></div>
+<main id="f"></main>
+<script>
+const WA="256781824421",EM="infogrowthpilotwebstudio@gmail.com";
+const P=["Homepage","About Us","Services","Products","Portfolio/Gallery","Contact","Testimonials","Blog","FAQ","Other"];
+const F=["WhatsApp integration","Contact form","Appointment booking","Online payments","Online shopping","Google Maps","Customer reviews","Newsletter subscription","Other"];
+const YN=["Yes","No","Not sure"];
+// types: i text, e email, t tel, a textarea, c checkboxes, r radio
+const S=[
+["Section 1: Client Information",[["i","Business Name"],["i","Contact Person"],["e","Email Address"],["t","Phone Number"],["i","Business Location"],["a","Business Social Media Links"]]],
+["Section 2: Your Business",[["a","Briefly describe your business"],["a","What products or services do you offer?"],["a","Who are your ideal customers?"],["a","What makes your business unique?"],["a","Who are your main competitors?"]]],
+["Section 3: Website Objectives",[["a","Why do you need a website?"],["a","What are your primary website goals?"],["a","What actions should visitors take? (e.g. call, WhatsApp, book, buy)"],["a","What would make your website successful?"]]],
+["Section 4: Website Requirements",[["c","Which pages would you like?",P],["i","Other page(s)"],["c","Which features do you require?",F],["i","Other feature(s)"]]],
+["Section 5: Design Preferences",[["r","Do you have an existing logo?",YN],["a","Do you have brand colours? (list them or write “none”)"],["a","Describe your preferred website design style"],["a","Share 2–3 websites you admire (links)"],["a","What do you like about those websites?"]]],
+["Section 6: Website Content",[["c","Please tick what you already have",["Business logo","Business photographs","Product photographs","Service descriptions","Business profile","Testimonials","Contact information"]],["r","Who will provide the website content?",["I will","GrowthPilot Web Studio","Both of us"]]]],
+["Section 7: Domain & Hosting",[["r","Do you already own a domain name?",YN.slice(0,2)],["i","Domain name (if yes)"],["r","Do you currently have website hosting?",YN.slice(0,2)],["r","Would you like assistance with domain registration and hosting?",YN],["r","Would you like a professional business email?",YN]]],
+["Section 8: Project Details",[["i","Estimated website budget"],["i","Preferred launch date"],["i","Who will approve the website?"],["r","Do you require ongoing website maintenance?",YN],["a","Any additional requirements?"]]],
+["Section 9: Final Notes",[["a","Is there anything else you would like us to know about your project?"]]]
+];
+const K="gp-discovery-v1";let V={};
+try{V=JSON.parse(localStorage.getItem(K)||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(V))}catch(e){}};
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+let h=`<section><h2>BEFORE YOU START</h2><p style="margin:0 0 10px">Welcome, and thank you for choosing GrowthPilot Web Studio. These questions help us understand your business so we can build the right website for you.</p><ul style="margin:0;padding-left:20px"><li>It takes about 10 minutes.</li><li>Skip anything you’re unsure about. We’ll talk it through with you.</li><li>Your answers save on this device, so you can come back and finish later.</li></ul></section>`;
+S.forEach((s,i)=>{h+=`<section><h2>${s[0].toUpperCase()}</h2>`;
+s[1].forEach((q,j)=>{const id=`q${i}_${j}`,v=V[id];h+=`<div class="${q[0]=="c"||q[0]=="r"?"q":""}">`;
+if(q[0]=="c"||q[0]=="r"){h+=`${esc(q[1])}</div><div class="opts">`;
+q[2].forEach((o,k)=>{const on=q[0]=="c"?(v||[]).includes(o):v===o;h+=`<label><input type="${q[0]=="c"?"checkbox":"radio"}" name="${id}" value="${esc(o)}" data-id="${id}" ${on?"checked":""}>${esc(o)}</label>`});h+="</div>"}
+else{h+=`<label class="q" for="${id}">${esc(q[1])}</label>`;
+h+=q[0]=="a"?`<textarea id="${id}" data-id="${id}">${esc(v||"")}</textarea>`:`<input id="${id}" data-id="${id}" type="${q[0]=="i"?"text":q[0]=="e"?"email":"tel"}" value="${esc(v||"")}">`}
+if(q[0]!="c"&&q[0]!="r")h+="</div>"});h+="</section>"});
+h+=`<div class="actions"><h2>SUBMIT YOUR ANSWERS</h2><div>Your answers save on this device as you type. When you’re done, send them to us.</div>
+<div class="btns"><button id="em">Email to GrowthPilot</button><button id="wa">Send on WhatsApp</button><button class="o" id="cp">Copy answers</button><button class="o" id="pr">Print / Save PDF</button><button class="o" id="cl">Clear form</button></div><div id="msg"></div><div id="ty" style="display:none;margin-top:16px;padding:16px;border:2px solid var(--gold);border-radius:10px"><b style="color:var(--gold);font-family:Montserrat,sans-serif">Thank you!</b><br>We’ll reply within 24 hours. If you haven’t seen your message go through, use <b>Copy answers</b> and send it to us directly.</div></div>
+<footer>Thank you for sharing your requirements.<br><b>GrowthPilot Web Studio</b> · Websites That Grow Your Business</footer>`;
+document.getElementById("f").innerHTML=h;
+const total=S.reduce((n,s)=>n+s[1].length,0);
+function prog(){const n=Object.values(V).filter(x=>Array.isArray(x)?x.length:(x||"").trim()).length;document.getElementById("fill").style.width=Math.min(100,n/total*100)+"%"}
+document.getElementById("f").addEventListener("input",e=>{const t=e.target,id=t.dataset.id;if(!id)return;
+if(t.type=="checkbox"){const a=new Set(V[id]||[]);t.checked?a.add(t.value):a.delete(t.value);V[id]=[...a]}else V[id]=t.value;save();prog()});
+function text(){let o="GROWTHPILOT WEB STUDIO – PROJECT DISCOVERY QUESTIONNAIRE\n";
+S.forEach((s,i)=>{o+=`\n== ${s[0]} ==\n`;s[1].forEach((q,j)=>{const v=V[`q${i}_${j}`];o+=`${q[1]}: ${Array.isArray(v)?v.join(", "):(v||"").trim()}\n`})});return o}
+const say=m=>{const e=document.getElementById("msg");e.textContent=m;setTimeout(()=>e.textContent="",5000)};
+const thanks=()=>{const t=document.getElementById("ty");t.style.display="block";t.scrollIntoView({behavior:"smooth",block:"center"})};const nm=()=>(V.q0_0||"New client").trim();
+document.getElementById("em").onclick=()=>{thanks();location.href=`mailto:${EM}?subject=${encodeURIComponent("Website Discovery Questionnaire – "+nm())}&body=${encodeURIComponent(text())}`;say("If your email app didn’t fill in everything, use Copy answers and paste it.")};
+document.getElementById("wa").onclick=()=>{thanks();window.open(`https://wa.me/${WA}?text=${encodeURIComponent(text())}`,"_blank")};
+document.getElementById("cp").onclick=async()=>{try{await navigator.clipboard.writeText(text());say("Copied. Paste it into an email or WhatsApp message.")}catch(e){const t=document.createElement("textarea");t.value=text();document.body.appendChild(t);t.select();try{document.execCommand("copy");say("Copied.")}catch(_){say("Copy isn’t available here. Use Print / Save PDF.")}t.remove()}};
+document.getElementById("pr").onclick=()=>window.print();
+document.getElementById("cl").onclick=()=>{if(confirm("Clear all answers?")){V={};save();location.reload()}};
+prog();
+</script></body></html>
