@@ -4,21 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pricing | GrowthPilot Web Studio</title>
-<meta name="description" content="Transparent starting prices for Starter, Business and Premium websites.">
-<link rel="canonical" href="https://YOUR-DOMAIN.com/pricing.html">
-<meta property="og:type" content="website"><meta property="og:site_name" content="GrowthPilot Web Studio"><meta property="og:title" content="Pricing | GrowthPilot Web Studio"><meta property="og:description" content="Transparent starting prices for Starter, Business and Premium websites."><meta property="og:url" content="https://YOUR-DOMAIN.com/pricing.html">
-<meta name="theme-color" content="#F8F6EF">
+<meta name="description" content="Transparent starting prices for Starter, Business and Premium websites, plus custom quotations, from GrowthPilot Web Studio.">
+<link rel="canonical" href="https://growthpilot-webstudio.vercel.app/pricing.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="GrowthPilot Web Studio"><meta property="og:title" content="Pricing | GrowthPilot Web Studio"><meta property="og:description" content="Transparent starting prices for Starter, Business and Premium websites."><meta property="og:url" content="https://growthpilot-webstudio.vercel.app/pricing.html">
+<meta name="theme-color" content="#101827">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧭%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101827;--gold:#C5A46D;--ivory:#F8F6F1;--grey:#A7AFBA;--ink:#1c2433;--gd:#7d5f2a;--line:#e6e0d3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Lato,system-ui,sans-serif;color:var(--ink);background:var(--ivory)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+a{color:inherit}.w{max-width:1160px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:rgba(248,246,241,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}.nav img{height:46px;width:auto}
+nav{display:flex;gap:24px;align-items:center}nav a{text-decoration:none;font-weight:700;font-size:.88rem;color:var(--navy)}nav a:hover,nav a.on{color:var(--gd)}
+#burger{display:none;background:none;border:1px solid var(--navy);border-radius:8px;padding:8px 12px;font-weight:700;color:var(--navy);cursor:pointer}
+.btn{display:inline-block;background:var(--gold);color:var(--navy)!important;font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none;border:2px solid var(--gold);transition:.25s;font-size:.95rem}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(197,164,109,.35)}.btn.o{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.4)}.btn.o:hover{border-color:var(--gold);color:var(--gold)!important}
+nav .btn{padding:9px 20px;font-size:.85rem}
+.eb{color:var(--gd);letter-spacing:.22em;font-size:.74rem;font-weight:700;text-transform:uppercase}.hero .eb,.dk .eb{color:var(--gold)}
+.hero{background:var(--navy);color:#fff;padding:76px 0 84px}.hero h1{font-size:clamp(2.1rem,5vw,3.2rem);margin:14px 0 14px}.hero p{color:#cfd5de;font-size:1.1rem;max-width:620px;margin:0}
+section{padding:84px 0}.alt{background:#fff}.dk{background:var(--navy);color:#fff}
+.hd{text-align:center;max-width:680px;margin:0 auto 44px}.hd h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:10px 0 0}
+.pr{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:stretch}
+.pc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;position:relative}.pc.f{background:var(--navy);color:#fff;border-color:var(--gold);box-shadow:0 24px 50px rgba(16,24,39,.25)}
+.pc h3{font-size:1.4rem}.pc .pp{font:700 2rem 'Playfair Display',serif;color:var(--gd);margin:10px 0 2px}.pc.f .pp{color:var(--gold)}
+.pc small{color:#6b7482;display:block}.pc.f small{color:var(--grey)}.pc .ds{margin:12px 0 0;color:#4a5262;font-size:.95rem}.pc.f .ds{color:#cfd5de}
+.pc ul{list-style:none;padding:0;margin:18px 0 24px;flex:1}.pc li{padding:6px 0 6px 24px;position:relative;font-size:.95rem}.pc li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.bd{position:absolute;top:-13px;left:32px;background:var(--gold);color:var(--navy);font-size:.66rem;letter-spacing:.14em;font-weight:700;padding:4px 12px;border-radius:999px}
+.fn{text-align:center;color:#6b7482;font-size:.9rem;margin:30px auto 0;max-width:640px}
+.fq{max-width:780px;margin:0 auto}details{background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;color:var(--navy)}details p{margin:12px 0 0;color:#4a5262}details[open]{border-color:var(--gold)}
+.fin{text-align:center;max-width:680px;margin:0 auto}.fin h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:14px}.fin p{color:var(--grey);margin:0 0 26px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+footer{background:#0b111c;color:var(--grey);padding:64px 0 28px;font-size:.93rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}.fg h4{color:#fff;margin:0 0 14px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+.fg a,.fg span{display:block;text-decoration:none;margin-bottom:8px}.fg a:hover{color:var(--gold)}.lg{font:700 1.15rem 'Playfair Display',serif;color:#fff;letter-spacing:.06em}.lg b{color:var(--gold)}
+.cp{margin-top:36px;padding-top:20px;border-top:1px solid #1d2636;font-size:.82rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}#burger{display:block}
+nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ivory);flex-direction:column;align-items:flex-start;padding:20px 22px;border-bottom:1px solid var(--line)}nav.open{display:flex}section{padding:60px 0}.hero{padding:56px 0 60px}}
+@media(max-width:560px){.fg{grid-template-columns:1fr}}
+</style>
 <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
-<header><div class="wrap nav"><a href="index.html" aria-label="GrowthPilot Web Studio home"><img class="lg" src="assets/logo.png" alt="GrowthPilot Web Studio" width="190" height="50"></a><button id="burger" aria-label="Menu" aria-expanded="false">☰ Menu</button><nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html" class="on" aria-current="page">Pricing</a><a href="contact.html">Contact</a><a class="btn" style="margin-left:20px;padding:8px 18px;color:var(--navy)" href="contact.html">Free Quote</a></nav></div></header>
+<header><div class="w nav"><a href="index.html" aria-label="GrowthPilot Web Studio home"><img src="assets/logo.png" alt="GrowthPilot Web Studio" width="190" height="50"></a><button id="burger" aria-label="Menu" aria-expanded="false">☰ Menu</button>
+<nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html" class="on" aria-current="page">Pricing</a><a href="questionnaire.html">Client Questionnaire</a><a href="contact.html">Contact</a><a class="btn" href="contact.html">Start Your Project</a></nav></div></header>
 <main id="app">
-<div class="hero"><div class="wrap"><div class="eyebrow">Pricing</div><h1>Clear starting prices, <em>no surprises</em></h1><p style="color:#d9d3c3">Prices are proposed starting prices. Your final quote depends on your needs. International clients are quoted in USD.</p></div></div><section><div class="wrap grid g3"><div class="card rv "><h3 style="margin-top:8px">Starter Website</h3><div class="price">UGX 350,000</div><div class="muted" style="font-size:.9rem">International clients: contact us for a USD quote</div><p>For small businesses getting started online.</p><ul><li>Up to 3 pages</li><li>Responsive design</li><li>Contact form</li><li>WhatsApp integration</li><li>Basic SEO setup</li></ul><a class="btn" href="contact.html">Choose Starter</a><p class="muted" style="font-size:.8rem;margin-bottom:0">Proposed starting price.</p></div><div class="card rv pop"><span class="badge">MOST POPULAR</span><h3 style="margin-top:8px">Business Website</h3><div class="price">UGX 650,000</div><div class="muted" style="font-size:.9rem">International clients: contact us for a USD quote</div><p>For businesses wanting a stronger online presence.</p><ul><li>Up to 6 pages</li><li>Responsive design</li><li>Contact forms</li><li>WhatsApp integration</li><li>Google Maps integration</li><li>Basic SEO setup</li><li>Social media links</li></ul><a class="btn" href="contact.html">Choose Business</a><p class="muted" style="font-size:.8rem;margin-bottom:0">Proposed starting price.</p></div><div class="card rv "><h3 style="margin-top:8px">Premium Website</h3><div class="price">UGX 1,200,000</div><div class="muted" style="font-size:.9rem">International clients: contact us for a USD quote</div><p>For businesses requiring advanced functionality.</p><ul><li>Up to 10 pages</li><li>Premium design</li><li>Advanced contact forms</li><li>WhatsApp integration</li><li>SEO fundamentals</li><li>Performance optimization</li><li>Analytics setup</li><li>Enhanced functionality</li></ul><a class="btn" href="contact.html">Choose Premium</a><p class="muted" style="font-size:.8rem;margin-bottom:0">Proposed starting price.</p></div></div></section><section class="alt"><div class="wrap" style="max-width:780px"><div class="center rv"><div class="eyebrow">FAQ</div><h2>Pricing questions</h2></div><details class="rv"><summary>How long does a website take?</summary><p>Timelines depend on the package and how quickly content is shared. We confirm a schedule in your quote.</p></details><details class="rv"><summary>Do I need my own content?</summary><p>Bring what you have. We can guide you on text and images and help organise everything.</p></details><details class="rv"><summary>Can you work with international clients?</summary><p>Yes. We serve businesses in Uganda and abroad, fully online.</p></details><details class="rv"><summary>What do the prices include?</summary><p>The packages list what is included. Prices are starting prices and the final quote depends on your needs.</p></details><details class="rv"><summary>Do you provide support after launch?</summary><p>Yes, through our Website Maintenance service. Ask us for details.</p></details></div></section><section><div class="wrap"><div class="cta rv"><h2>Ready to grow your business online?</h2><p>Tell us about your project and get a free, no-obligation quote.</p><a class="btn" href="contact.html">Get a Free Quote</a> <a class="btn o" href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio" style="margin-left:8px">WhatsApp Us</a></div></div></section></main>
-<footer><div class="wrap grid g3"><div><div class="logo">GROWTHPILOT <b>WEB STUDIO</b></div><p>Websites That Grow Your Business. Website design and development for Uganda and beyond.</p></div><div><h3>Explore</h3><div><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div></div><div><h3>Contact</h3><div><a href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio">WhatsApp: +256781824421</a><a href="mailto:infogrowthpilotwebstudio@gmail.com">infogrowthpilotwebstudio@gmail.com</a><span>Kampala, Uganda</span><span>Hours: Monday – Friday, 8:00 AM – 5:00 PM</span></div></div></div><div class="wrap" style="margin-top:28px;font-size:.85rem">© 2026 GrowthPilot Web Studio. No client projects are listed yet.</div></footer>
+<div class="hero"><div class="w"><div class="eb">Pricing</div><h1>Clear starting prices, no surprises</h1><p>Prices are proposed starting prices. Your final quote depends on your needs. International clients are quoted in USD.</p></div></div>
+
+<section><div class="w"><div class="pr">
+<div class="pc rv"><h3>Starter Website</h3><div class="pp">UGX 350,000</div><small>International clients: contact us for a USD quote</small><p class="ds">For small businesses getting started online.</p><ul><li>Up to 3 pages</li><li>Responsive design</li><li>Contact form</li><li>WhatsApp integration</li><li>Basic SEO setup</li></ul><a class="btn" href="contact.html">Choose This Package</a></div>
+<div class="pc f rv"><span class="bd">MOST POPULAR</span><h3>Business Website</h3><div class="pp">UGX 650,000</div><small>International clients: contact us for a USD quote</small><p class="ds">For businesses wanting a stronger online presence.</p><ul><li>Up to 6 pages</li><li>Responsive design</li><li>Contact forms</li><li>WhatsApp integration</li><li>Google Maps integration</li><li>Basic SEO setup</li><li>Social media links</li></ul><a class="btn" href="contact.html">Choose This Package</a></div>
+<div class="pc rv"><h3>Premium Website</h3><div class="pp">UGX 1,200,000</div><small>International clients: contact us for a USD quote</small><p class="ds">For businesses requiring advanced functionality.</p><ul><li>Up to 10 pages</li><li>Premium design</li><li>Advanced contact forms</li><li>WhatsApp integration</li><li>SEO fundamentals</li><li>Performance optimization</li><li>Analytics setup</li><li>Enhanced functionality</li></ul><a class="btn" href="contact.html">Choose This Package</a></div>
+<div class="pc rv"><h3>Custom Quotation</h3><div class="pp" style="font-size:1.4rem">Tailored to you</div><small>For projects that need something different</small><p class="ds">Not sure which package fits? Tell us what you need and we’ll prepare a personal quote.</p><ul><li>Planned around your goals</li><li>Quote based on your requirements</li><li>International clients: USD quote</li></ul><a class="btn" href="contact.html">Request a Quote</a></div>
+</div><p class="fn">All prices are proposed starting prices. The final quote depends on your project.</p></div></section>
+
+<section class="alt"><div class="w"><div class="hd rv"><div class="eb">FAQ</div><h2>Pricing questions</h2></div><div class="fq">
+<details class="rv"><summary>How long does a website take?</summary><p>Timelines depend on the package and how quickly content is shared. We confirm a schedule in your quote.</p></details>
+<details class="rv"><summary>Do I need my own content?</summary><p>Bring what you have. We can guide you on text and images and help organise everything.</p></details>
+<details class="rv"><summary>Can you work with international clients?</summary><p>Yes. We serve businesses in Uganda and abroad, fully online.</p></details>
+<details class="rv"><summary>What do the prices include?</summary><p>The packages list what is included. Prices are starting prices and the final quote depends on your needs.</p></details>
+<details class="rv"><summary>Do you provide support after launch?</summary><p>Yes, through our Website Maintenance service. Ask us for details.</p></details></div></div></section>
+
+<section class="dk"><div class="w fin rv"><h2>Ready to grow your business online?</h2><p>Tell us about your project and get a free, no-obligation quote.</p><div class="cta"><a class="btn" href="contact.html">Get a Free Quote</a><a class="btn o" href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio">WhatsApp Us</a></div></div></section>
+</main>
+<footer><div class="w"><div class="fg"><div><div class="lg">GROWTHPILOT <b>WEB STUDIO</b></div><p>Websites That Grow Your Business. Website design and development for Uganda and beyond.</p></div>
+<div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="questionnaire.html">Client Questionnaire</a><a href="contact.html">Contact</a></div>
+<div><h4>Services</h4><span>Business Websites</span><span>E-commerce</span><span>Restaurant Websites</span><span>NGO &amp; Nonprofit</span><span>Redesign</span><span>Maintenance</span></div>
+<div><h4>Contact</h4><a href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio">WhatsApp: +256781824421</a><a href="mailto:infogrowthpilotwebstudio@gmail.com">infogrowthpilotwebstudio@gmail.com</a><span>Kampala, Uganda</span><span>Monday – Friday, 8:00 AM – 5:00 PM</span></div></div>
+<div class="cp">© 2026 GrowthPilot Web Studio. Portfolio items shown are concept designs.</div></div></footer>
 <script src="app.js" defer></script>
 </body>
 </html>
