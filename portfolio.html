@@ -4,21 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Portfolio | GrowthPilot Web Studio</title>
-<meta name="description" content="Demo and concept website projects from GrowthPilot Web Studio.">
-<link rel="canonical" href="https://YOUR-DOMAIN.com/portfolio.html">
-<meta property="og:type" content="website"><meta property="og:site_name" content="GrowthPilot Web Studio"><meta property="og:title" content="Portfolio | GrowthPilot Web Studio"><meta property="og:description" content="Demo and concept website projects from GrowthPilot Web Studio."><meta property="og:url" content="https://YOUR-DOMAIN.com/portfolio.html">
-<meta name="theme-color" content="#F8F6EF">
+<meta name="description" content="Design concepts and creative explorations from GrowthPilot Web Studio, plus our own in-house website project.">
+<link rel="canonical" href="https://growthpilot-webstudio.vercel.app/portfolio.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="GrowthPilot Web Studio"><meta property="og:title" content="Portfolio | GrowthPilot Web Studio"><meta property="og:description" content="Design concepts and creative explorations from GrowthPilot Web Studio."><meta property="og:url" content="https://growthpilot-webstudio.vercel.app/portfolio.html">
+<meta name="theme-color" content="#101827">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧭%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101827;--gold:#C5A46D;--ivory:#F8F6F1;--grey:#A7AFBA;--ink:#1c2433;--gd:#7d5f2a;--line:#e6e0d3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Lato,system-ui,sans-serif;color:var(--ink);background:var(--ivory)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+a{color:inherit}.w{max-width:1160px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:rgba(248,246,241,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}.nav img{height:46px;width:auto}
+nav{display:flex;gap:24px;align-items:center}nav a{text-decoration:none;font-weight:700;font-size:.88rem;color:var(--navy)}nav a:hover,nav a.on{color:var(--gd)}
+#burger{display:none;background:none;border:1px solid var(--navy);border-radius:8px;padding:8px 12px;font-weight:700;color:var(--navy);cursor:pointer}
+.btn{display:inline-block;background:var(--gold);color:var(--navy)!important;font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none;border:2px solid var(--gold);transition:.25s;font-size:.95rem}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(197,164,109,.35)}.btn.o{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.4)}.btn.o:hover{border-color:var(--gold);color:var(--gold)!important}
+nav .btn{padding:9px 20px;font-size:.85rem}
+.eb{color:var(--gd);letter-spacing:.22em;font-size:.74rem;font-weight:700;text-transform:uppercase}.hero .eb,.dk .eb{color:var(--gold)}
+.hero{background:var(--navy);color:#fff;padding:76px 0 84px}.hero h1{font-size:clamp(2.1rem,5vw,3.2rem);margin:14px 0 14px}.hero p{color:#cfd5de;font-size:1.1rem;max-width:620px;margin:0}
+section{padding:84px 0}.alt{background:#fff}.dk{background:var(--navy);color:#fff}
+.hd{text-align:center;max-width:700px;margin:0 auto 48px}.hd h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:10px 0 14px}.hd p{margin:0;color:#5b6472}
+.win{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 24px 50px rgba(16,24,39,.18)}
+.bar{height:22px;background:#e9e6df;display:flex;gap:5px;align-items:center;padding:0 10px}.bar i{width:8px;height:8px;border-radius:50%;background:#c9c4b8}
+.pgx{padding:14px}.hb{height:96px;border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.ln{height:8px;border-radius:4px;background:rgba(255,255,255,.88);width:70%}.ln.s{width:44%;opacity:.55}.bt{width:72px;height:16px;border-radius:9px}
+.tl{display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:8px;margin-top:10px}.tl b{height:46px;border-radius:5px;background:#efeae0}
+.ft{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}.ft .win{box-shadow:0 24px 50px rgba(16,24,39,.22)}.ft .hb{height:130px}.ft .tl b{height:58px}
+.badge{display:inline-block;font-size:.66rem;letter-spacing:.14em;font-weight:700;background:var(--gold);color:var(--navy);border-radius:999px;padding:4px 12px}
+.ft h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin:14px 0 14px}.ft p{color:#4a5262;margin:0 0 14px}
+.ft ul{list-style:none;padding:0;margin:0 0 24px}.ft li{padding:5px 0 5px 24px;position:relative}.ft li:before{content:"✓";position:absolute;left:0;color:var(--gd);font-weight:700}
+.cg{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.cc{background:var(--ivory);border-radius:16px;padding:18px;border:1px solid var(--line);transition:.3s}.cc:hover{transform:translateY(-6px);box-shadow:0 22px 40px rgba(16,24,39,.12)}
+.cc .win{box-shadow:none;border:1px solid var(--line)}.cc h3{font-size:1.25rem;margin-bottom:8px}.cc p{margin:0;color:#5b6472;font-size:.95rem}
+.tag{display:inline-block;font-size:.66rem;letter-spacing:.14em;font-weight:700;color:var(--gd);border:1px solid var(--gold);border-radius:999px;padding:3px 11px;margin:16px 0 8px}
+.note{text-align:center;color:#6b7482;font-size:.9rem;margin:34px auto 0;max-width:640px}
+.fin{text-align:center;max-width:680px;margin:0 auto}.fin h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:14px}.fin p{color:var(--grey);margin:0 0 26px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+footer{background:#0b111c;color:var(--grey);padding:64px 0 28px;font-size:.93rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}.fg h4{color:#fff;margin:0 0 14px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+.fg a,.fg span{display:block;text-decoration:none;margin-bottom:8px}.fg a:hover{color:var(--gold)}.lg{font:700 1.15rem 'Playfair Display',serif;color:#fff;letter-spacing:.06em}.lg b{color:var(--gold)}
+.cp{margin-top:36px;padding-top:20px;border-top:1px solid #1d2636;font-size:.82rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:900px){.ft{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}#burger{display:block}
+nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ivory);flex-direction:column;align-items:flex-start;padding:20px 22px;border-bottom:1px solid var(--line)}nav.open{display:flex}section{padding:60px 0}.hero{padding:56px 0 60px}}
+@media(max-width:560px){.fg{grid-template-columns:1fr}}
+</style>
 <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
-<header><div class="wrap nav"><a href="index.html" aria-label="GrowthPilot Web Studio home"><img class="lg" src="assets/logo.png" alt="GrowthPilot Web Studio" width="190" height="50"></a><button id="burger" aria-label="Menu" aria-expanded="false">☰ Menu</button><nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="on" aria-current="page">Portfolio</a><a href="pricing.html">Pricing</a><a href="questionnaire.html">Client Questionnaire</a><a href="contact.html">Contact</a><a class="btn" style="margin-left:20px;padding:8px 18px;color:var(--navy)" href="contact.html">Free Quote</a></nav></div></header>
+<header><div class="w nav"><a href="index.html" aria-label="GrowthPilot Web Studio home"><img src="assets/logo.png" alt="GrowthPilot Web Studio" width="190" height="50"></a><button id="burger" aria-label="Menu" aria-expanded="false">☰ Menu</button>
+<nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="on" aria-current="page">Portfolio</a><a href="pricing.html">Pricing</a><a href="questionnaire.html">Client Questionnaire</a><a href="contact.html">Contact</a><a class="btn" href="contact.html">Start Your Project</a></nav></div></header>
 <main id="app">
-<div class="hero"><div class="wrap"><div class="eyebrow">Portfolio</div><h1>Our <em>Projects</em></h1><p style="color:#d9d3c3">Our first project is our own website. We haven’t published any client projects yet, and we’ll add real client work once it’s completed. Concept projects, website design demos and sample designs will follow.</p></div></div><section><div class="wrap"><div class="card rv"><span class="badge">IN-HOUSE PROJECT</span><h3 style="margin-top:12px">GrowthPilot Web Studio Website</h3><p>Our own agency website, designed and built from scratch to show how we work. It is mobile-friendly, loads fast, and makes it easy for visitors to get in touch.</p><ul><li>Responsive design for phones, tablets and computers</li><li>Clear service and pricing pages</li><li>WhatsApp and email contact, plus a free quote enquiry</li><li>Client questionnaire and review form</li></ul><a class="btn" href="https://growthpilot-webstudio.vercel.app/" target="_blank" rel="noopener">View live site</a></div></div></section><section class="alt"><div class="wrap grid g3"><div class="card rv"><div class="ico" aria-hidden="true">🧩</div><span class="badge">COMING SOON</span><h3 style="margin-top:12px">Concept Projects</h3><p>Original website concepts we design to explore ideas and styles for different industries.</p><div class="ph" style="padding:18px;font-size:.9rem">Our first designs will appear here.</div></div><div class="card rv"><div class="ico" aria-hidden="true">🖥️</div><span class="badge">COMING SOON</span><h3 style="margin-top:12px">Website Design Demos</h3><p>Demonstration designs showing how a finished business website could look and work.</p><div class="ph" style="padding:18px;font-size:.9rem">Our first designs will appear here.</div></div><div class="card rv"><div class="ico" aria-hidden="true">🎨</div><span class="badge">COMING SOON</span><h3 style="margin-top:12px">Sample Website Designs</h3><p>Sample layouts and pages that show our design style and quality.</p><div class="ph" style="padding:18px;font-size:.9rem">Our first designs will appear here.</div></div></div></section><section><div class="wrap"><div class="cta rv"><h2>Ready to grow your business online?</h2><p>Tell us about your project and get a free, no-obligation quote.</p><a class="btn" href="contact.html">Get a Free Quote</a> <a class="btn o" href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio" style="margin-left:8px">WhatsApp Us</a></div></div></section></main>
-<footer><div class="wrap grid g3"><div><div class="logo">GROWTHPILOT <b>WEB STUDIO</b></div><p>Websites That Grow Your Business. Website design and development for Uganda and beyond.</p></div><div><h3>Explore</h3><div><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="questionnaire.html">Client Questionnaire</a><a href="contact.html">Contact</a></div></div><div><h3>Contact</h3><div><a href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio">WhatsApp: +256781824421</a><a href="mailto:infogrowthpilotwebstudio@gmail.com">infogrowthpilotwebstudio@gmail.com</a><span>Kampala, Uganda</span><span>Hours: Monday – Friday, 8:00 AM – 5:00 PM</span></div></div></div><div class="wrap" style="margin-top:28px;font-size:.85rem">© 2026 GrowthPilot Web Studio. No client projects are listed yet.</div></footer>
+<div class="hero"><div class="w"><div class="eb">Portfolio</div><h1>Our Work &amp; Design Explorations</h1><p>Our first project is our own website. Alongside it, we explore design concepts for different industries. Real client work will appear here as it is completed.</p></div></div>
+
+<section><div class="w ft"><div class="rv"><span class="badge">IN-HOUSE PROJECT</span><h2>GrowthPilot Web Studio Website</h2><p>Our own agency website, designed and built from scratch to show how we work. It is mobile-friendly, loads fast, and makes it easy for visitors to get in touch.</p><ul><li>Responsive design for phones, tablets and computers</li><li>Clear service and pricing pages</li><li>WhatsApp and email contact, plus a free quote enquiry</li><li>Client questionnaire</li></ul><a class="btn" href="https://growthpilot-webstudio.vercel.app/" target="_blank" rel="noopener">View live site</a></div>
+<div class="win rv" role="img" aria-label="Illustration of the GrowthPilot Web Studio website"><div class="bar"><i></i><i></i><i></i></div><div class="pgx"><div class="hb" style="background:#101827"><div class="ln"></div><div class="ln s"></div><div class="bt" style="background:#C5A46D"></div></div><div class="tl"><b></b><b></b><b></b></div></div></div></div></section>
+
+<section class="alt" id="concepts"><div class="w"><div class="hd rv"><div class="eb">Concepts</div><h2>Design Concepts &amp; Creative Explorations</h2><p>Studio concepts that show our design direction across different industries. They are demonstrations, not client projects.</p></div><div class="cg" id="cg"></div><p class="note">Want to see how your industry could look? Tell us about your business and we’ll plan a design around it.</p></div></section>
+
+<section class="dk"><div class="w fin rv"><h2>Ready to grow your business online?</h2><p>Tell us about your project and get a free, no-obligation quote.</p><div class="cta"><a class="btn" href="contact.html">Get a Free Quote</a><a class="btn o" href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio">WhatsApp Us</a></div></div></section>
+</main>
+<footer><div class="w"><div class="fg"><div><div class="lg">GROWTHPILOT <b>WEB STUDIO</b></div><p>Websites That Grow Your Business. Website design and development for Uganda and beyond.</p></div>
+<div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="questionnaire.html">Client Questionnaire</a><a href="contact.html">Contact</a></div>
+<div><h4>Services</h4><span>Business Websites</span><span>E-commerce</span><span>Restaurant Websites</span><span>NGO &amp; Nonprofit</span><span>Redesign</span><span>Maintenance</span></div>
+<div><h4>Contact</h4><a href="https://wa.me/256781824421?text=Hello%20GrowthPilot%20Web%20Studio">WhatsApp: +256781824421</a><a href="mailto:infogrowthpilotwebstudio@gmail.com">infogrowthpilotwebstudio@gmail.com</a><span>Kampala, Uganda</span><span>Monday – Friday, 8:00 AM – 5:00 PM</span></div></div>
+<div class="cp">© 2026 GrowthPilot Web Studio. Portfolio items shown are concept designs.</div></div></footer>
 <script src="app.js" defer></script>
+<script>
+/* CONCEPTS: edit this list to change the cards. To show a real client project later, replace an entry's title, text and tag, and link it to the live site. */
+const CN=[["Restaurant Website","#7a2e1d","#C5A46D","CONCEPT DESIGN","An inviting restaurant site with menu, reservations and location.",3],["Corporate Business Website","#101827","#C5A46D","STUDIO EXPLORATION","A refined corporate presence that communicates trust and expertise.",3],["E-commerce Store","#2f4f4f","#C5A46D","CONCEPT DESIGN","A clean online shop built to showcase products and simplify buying.",4],["Nonprofit Organisation","#1f5f4a","#e0c88f","STUDIO EXPLORATION","A warm, credible site that shares a mission and invites support.",3],["Service-Based Business","#3b3d6b","#C5A46D","CONCEPT DESIGN","A focused site that explains services and turns visitors into enquiries.",3]];
+document.getElementById("cg").innerHTML=CN.map(c=>`<article class="cc rv"><div class="win"><div class="bar"><i></i><i></i><i></i></div><div class="pgx"><div class="hb" style="background:${c[1]}"><div class="ln"></div><div class="ln s"></div><div class="bt" style="background:${c[2]}"></div></div><div class="tl" style="--n:${c[5]}">${"<b></b>".repeat(c[5])}</div></div></div><span class="tag">${c[3]}</span><h3>${c[0]}</h3><p>${c[4]}</p></article>`).join("");
+document.querySelectorAll(".rv").forEach(el=>{if("IntersectionObserver"in window){window._io=window._io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");window._io.unobserve(e.target)}}),{threshold:.1});window._io.observe(el)}else el.classList.add("in")});
+</script>
 </body>
 </html>
