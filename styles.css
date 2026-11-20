@@ -94,3 +94,9 @@ label{display:block;font:600 .85rem Inter,sans-serif;margin:16px 0 6px;color:#ff
 .steps{list-style:none;padding:0;counter-reset:s}.steps li{counter-increment:s;padding:8px 0 8px 40px;position:relative;font-size:.93rem}.steps li:before{content:counter(s);position:absolute;left:0;top:7px;width:26px;height:26px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:var(--ink);font:700 .75rem Sora,sans-serif}
 @media(max-width:980px){.two,.dv,.cl{grid-template-columns:1fr}.dv{gap:28px;padding:56px 0}}@media(max-width:560px){.row2{grid-template-columns:1fr}.fc{padding:24px}.big{padding:26px}}
 .pil.lbl i{width:84px;font-size:1.1rem}@media(max-width:560px){.pil.lbl i{width:64px;font-size:1rem}}
+/* solutions, products, insights */
+.sol .badge{align-self:flex-start}.sol p+p{margin-top:10px;font-size:.88rem;flex:1}.sol .lk{margin-top:16px}.sh2{font-size:1.5rem;margin:0 0 26px}.sh2+.grid{margin-bottom:54px}
+.pv{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.pv h2{font-size:clamp(1.8rem,3.8vw,2.6rem);margin:14px 0}.pv .dash{height:250px}.cap{font-size:.8rem;color:#8b95a8;margin-top:12px;text-align:center}
+.status{margin:22px 0 26px;padding:16px 20px;border:1px solid rgba(128,103,255,.45);background:rgba(128,103,255,.08);border-radius:14px;font-size:.94rem}.status b{color:#fff}
+.empty{max-width:680px;margin:48px auto 0;text-align:center;border-style:dashed;align-items:center}.empty h3{margin-top:0}.empty .cta{justify-content:center;margin-top:22px}
+@media(max-width:980px){.pv{grid-template-columns:1fr;gap:30px}}
