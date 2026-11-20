@@ -93,3 +93,4 @@ label{display:block;font:600 .85rem Inter,sans-serif;margin:16px 0 6px;color:#ff
 .side .card{margin-bottom:20px}.side h3{font-size:1.15rem;margin-top:0}.side p{margin-bottom:12px}.side a:not(.btn):not(.lk){color:var(--cyan);word-break:break-all}.card ul.steps{margin:6px 0 0}
 .steps{list-style:none;padding:0;counter-reset:s}.steps li{counter-increment:s;padding:8px 0 8px 40px;position:relative;font-size:.93rem}.steps li:before{content:counter(s);position:absolute;left:0;top:7px;width:26px;height:26px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:var(--ink);font:700 .75rem Sora,sans-serif}
 @media(max-width:980px){.two,.dv,.cl{grid-template-columns:1fr}.dv{gap:28px;padding:56px 0}}@media(max-width:560px){.row2{grid-template-columns:1fr}.fc{padding:24px}.big{padding:26px}}
+.pil.lbl i{width:84px;font-size:1.1rem}@media(max-width:560px){.pil.lbl i{width:64px;font-size:1rem}}
