@@ -20,6 +20,9 @@ else els.forEach(function(el){el.classList.add("in")});
 /* enquiry form (only on pages that have it) */
 var form=$("#enquiry-form");
 if(form){
+var map={web:"GrowthPilot Web",apps:"GrowthPilot Apps",products:"GrowthPilot Products",innovation:"GrowthPilot Innovation"};
+var q=new URLSearchParams(location.search).get("service");
+if(q&&map[q]&&form.elements.service)form.elements.service.value=map[q];
 var status=$("#form-status"),submit=$("button[type=submit]",form);
 var rules={name:"Please enter your name.",email:"Please enter a valid email address.",service:"Please choose a service.",message:"Please describe your project."};
 var val=function(n){var f=form.elements[n];return f?f.value.trim():""};
