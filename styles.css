@@ -100,3 +100,6 @@ label{display:block;font:600 .85rem Inter,sans-serif;margin:16px 0 6px;color:#ff
 .status{margin:22px 0 26px;padding:16px 20px;border:1px solid rgba(128,103,255,.45);background:rgba(128,103,255,.08);border-radius:14px;font-size:.94rem}.status b{color:#fff}
 .empty{max-width:680px;margin:48px auto 0;text-align:center;border-style:dashed;align-items:center}.empty h3{margin-top:0}.empty .cta{justify-content:center;margin-top:22px}
 @media(max-width:980px){.pv{grid-template-columns:1fr;gap:30px}}
+/* real concept screenshots */
+.th img,.shot img{display:block;width:100%;height:auto}.shot img{border-radius:8px}.hv .g1.shot{width:80%;top:12%}.shot .lab{text-transform:none;letter-spacing:.04em;font-size:.72rem}
+@media(max-width:560px){.hv .g1.shot{width:84%}}
